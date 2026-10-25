@@ -1,0 +1,101 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.14, pytest-9.0.3, pluggy-1.6.0 -- C:\Python_Learning\venv\Scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.14', 'Platform': 'Windows-11-10.0.26200-SP0', 'Packages': {'pytest': '9.0.3', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.14.0', 'base-url': '2.1.0', 'html': '4.2.0', 'metadata': '3.1.1'}, 'Base URL': ''}
+rootdir: C:\Python_Learning\GNS3-Protocol
+configfile: pytest.ini
+plugins: anyio-4.14.0, base-url-2.1.0, html-4.2.0, metadata-3.1.1
+collecting ... collected 6 items
+
+GNS3-Protocol\lacp.py::test_port_channel_is_up[R1] 
+R1 interface output:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES NVRAM  administratively down down    
+GigabitEthernet1/0     unassigned      YES NVRAM  up                    up      
+GigabitEthernet2/0     unassigned      YES NVRAM  up                    up      
+Serial3/0              unassigned      YES unset  administratively down down    
+Serial3/1              unassigned      YES unset  administratively down down    
+Serial3/2              unassigned      YES unset  administratively down down    
+Serial3/3              unassigned      YES unset  administratively down down    
+Serial3/4              unassigned      YES unset  administratively down down    
+Serial3/5              unassigned      YES unset  administratively down down    
+Serial3/6              unassigned      YES unset  administratively down down    
+Serial3/7              unassigned      YES unset  administratively down down    
+Ethernet4/0            unassigned      YES unset  administratively down down    
+Ethernet4/1            unassigned      YES unset  administratively down down    
+Ethernet4/2            unassigned      YES unset  administratively down down    
+Ethernet4/3            unassigned      YES unset  administratively down down    
+Ethernet4/4            unassigned      YES unset  administratively down down    
+Ethernet4/5            unassigned      YES unset  administratively down down    
+Ethernet4/6            unassigned      YES unset  administratively down down    
+Ethernet4/7            unassigned      YES unset  administratively down down    
+Serial5/0              unassigned      YES unset  administratively down down    
+Serial5/1              unassigned      YES unset  administratively down down    
+Serial5/2              unassigned      YES unset  administratively down down    
+Serial5/3              unassigned      YES unset  administratively down down    
+Ethernet6/0            unassigned      YES unset  administratively down down    
+Ethernet6/1            unassigned      YES unset  administratively down down    
+Ethernet6/2            unassigned      YES unset  administratively down down    
+Ethernet6/3            unassigned      YES unset  administratively down down    
+Port-channel1          10.10.10.1      YES NVRAM  up                    up      
+PASSED
+GNS3-Protocol\lacp.py::test_port_channel_is_up[R2] 
+R2 interface output:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES NVRAM  administratively down down    
+GigabitEthernet1/0     unassigned      YES NVRAM  up                    up      
+GigabitEthernet2/0     unassigned      YES NVRAM  up                    up      
+Serial3/0              unassigned      YES unset  administratively down down    
+Serial3/1              unassigned      YES unset  administratively down down    
+Serial3/2              unassigned      YES unset  administratively down down    
+Serial3/3              unassigned      YES unset  administratively down down    
+Serial3/4              unassigned      YES unset  administratively down down    
+Serial3/5              unassigned      YES unset  administratively down down    
+Serial3/6              unassigned      YES unset  administratively down down    
+Serial3/7              unassigned      YES unset  administratively down down    
+Ethernet4/0            unassigned      YES unset  administratively down down    
+Ethernet4/1            unassigned      YES unset  administratively down down    
+Ethernet4/2            unassigned      YES unset  administratively down down    
+Ethernet4/3            unassigned      YES unset  administratively down down    
+Ethernet4/4            unassigned      YES unset  administratively down down    
+Ethernet4/5            unassigned      YES unset  administratively down down    
+Ethernet4/6            unassigned      YES unset  administratively down down    
+Ethernet4/7            unassigned      YES unset  administratively down down    
+Ethernet5/0            unassigned      YES unset  administratively down down    
+Ethernet5/1            unassigned      YES unset  administratively down down    
+Ethernet5/2            unassigned      YES unset  administratively down down    
+Ethernet5/3            unassigned      YES unset  administratively down down    
+Serial6/0              unassigned      YES unset  administratively down down    
+Serial6/1              unassigned      YES unset  administratively down down    
+Serial6/2              unassigned      YES unset  administratively down down    
+Serial6/3              unassigned      YES unset  administratively down down    
+Port-channel1          10.10.10.2      YES NVRAM  up                    up      
+PASSED
+GNS3-Protocol\lacp.py::test_peer_ping[R1] 
+R1 ping to 10.10.10.2:
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.10.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 92/106/148 ms
+PASSED
+GNS3-Protocol\lacp.py::test_peer_ping[R2] 
+R2 ping to 10.10.10.1:
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.10.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 92/92/96 ms
+PASSED
+GNS3-Protocol\lacp.py::test_peer_arp_entry[R1] 
+R1 ARP table:
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.10.10.1              -   ca01.2b0c.001c  ARPA   Port-channel1
+Internet  10.10.10.2             18   ca02.2454.001c  ARPA   Port-channel1
+PASSED
+GNS3-Protocol\lacp.py::test_peer_arp_entry[R2] 
+R2 ARP table:
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.10.10.1             18   ca01.2b0c.001c  ARPA   Port-channel1
+Internet  10.10.10.2              -   ca02.2454.001c  ARPA   Port-channel1
+PASSED
+
+============================== 6 passed in 9.07s ==============================

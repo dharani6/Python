@@ -9,6 +9,9 @@ devices = [
 for device in devices:
     print(device)
 
+
+# 2nd method or way to print the list.
+
 l = len(devices)
 while l > 0:
     print(devices[l-1])

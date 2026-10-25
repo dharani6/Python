@@ -1,0 +1,152 @@
+Connected to Dynamips VM "R1" (ID 1, type c7200) - Console port
+Press ENTER to get the prompt.
+
+R1#
+R1#
+R1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#
+R1(config)#interface GigabitEthernet1/0
+R1(config-if)#shutdown
+R1(config-if)#
+R1(config-if)#end
+R1#
+R1#
+R1#
+R1#
+R1#show ip interface brief | include Port-channel1
+Port-channel1          10.10.10.1      YES manual up                    up      
+R1#
+R1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#
+R1(config)#interface GigabitEthernet1/0
+R1(config-if)#no shutdown
+R1(config-if)#
+R1(config-if)#end
+R1#
+R1#
+R1#
+*Sep 20 14:20:21.063: %SYS-5-CONFIG_I: Configured from console by console
+R1#
+*Sep 20 14:20:22.143: %SYS-5-CONFIG_I: Configured from console by console
+R1#
+R1#
+R1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#end
+R1#sh 
+*Sep 20 14:22:58.075: %SYS-5-CONFIG_I: Configured from console by console
+R1#sh ip inter
+R1#sh ip interface br
+R1#sh ip interface brief  
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES unset  administratively down down    
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet2/0     unassigned      YES unset  up                    up      
+Port-channel1          10.10.10.1      YES manual up                    up      
+R1#o conc 
+R1#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#inter
+R1(config)#interface gi
+R1(config)#interface gigabitEthernet 1/10  0
+R1(config-if)#shu
+R1(config-if)#shutdown 
+R1(config-if)#
+*Sep 20 14:23:50.835: GigabitEthernet1/0 taken out of port-channel1
+
+R1(config-if)#
+*Sep 20 14:23:50.975: %LINK-5-CHANGED: Interface GigabitEthernet1/0, changed state to administratively down
+*Sep 20 14:23:51.975: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/0, changed state to down
+R1(config-if)#do shi
+R1(config-if)#do shi    h ip inter 
+R1(config-if)#do sh ip inter br
+R1(config-if)#do sh ip inter br 
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES unset  administratively down down    
+GigabitEthernet1/0     unassigned      YES unset  administratively down down    
+GigabitEthernet2/0     unassigned      YES unset  up                    up      
+Port-channel1          10.10.10.1      YES manual up                    up      
+R1(config-if)#noshu
+R1(config-if)#noshu    sh
+R1(config-if)#no shutdown 
+R1(config-if)#no shutdown 
+%Interface MTU set to channel-group MTU 1500.
+
+*Sep 20 14:24:14.607: %LINK-3-UPDOWN: Interface GigabitEthernet1/0, changed state to up
+R1(config-if)#no shutdown do sh ip inter br 
+*Sep 20 14:24:14.627: GigabitEthernet1/0 added as member-2 to port-channel1
+ 
+R1(config-if)#do sh ip inter br shutdown          
+*Sep 20 14:24:15.607: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/0, changed state to up
+R1(config-if)#shutdown interface gigabitEthernet 1/0   2/0
+R1(config-if)#shu
+R1(config-if)#shutdown 
+R1(config-if)#do sh
+*Sep 20 14:24:25.635: %LINK-5-CHANGED: Interface GigabitEthernet2/0, changed state to administratively down
+R1(config-if)#do sh 
+*Sep 20 14:24:25.639: GigabitEthernet2/0 taken out of port-channel1
+
+R1(config-if)#do sh ip inte
+*Sep 20 14:24:26.635: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet2/0, changed state to down
+R1(config-if)#do sh ip inter
+R1(config-if)#do sh ip inter br
+R1(config-if)#do sh ip inter br 
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES unset  administratively down down    
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet2/0     unassigned      YES unset  administratively down down    
+Port-channel1          10.10.10.1      YES manual up                    up      
+R1(config-if)#
+R1(config-if)#terminal width 511
+               ^
+% Invalid input detected at '^' marker.
+
+R1(config-if)#terminal length 0
+               ^
+% Invalid input detected at '^' marker.
+
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#show ip interface brief
+                ^
+% Invalid input detected at '^' marker.
+
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#
+R1(config-if)#ping 10.10.10.2
+               ^
+% Invalid input detected at '^' marker.
+
+R1(config-if)#
+R1(config-if)#interface GigabitEthernet1/0
+R1(config-if)#shutdown
+R1(config-if)#
+R1(config-if)#end
+R1#
+R1#
+R1#
+R1#show ip interface brief | include Port-channel1
+Port-channel1          10.10.10.1      YES manual up                    up      
+R1#
+R1#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+R1(config)#
+*Sep 20 14:33:46.171: %SYS-5-CONFIG_I: Configured from console by console
+R1(config)#
+*Sep 20 14:33:48.043: %LINK-5-CHANGED: Interface GigabitEthernet1/0, changed state to administratively down
+R1(config)#
+*Sep 20 14:33:48.051: GigabitEthernet1/0 taken out of port-channel1
+
+R1(config)#
+*Sep 20 14:33:49.043: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/0, changed state to down
+R1(config)#
+*Sep 20 14:33:51.051: %LINEPROTO-5-UPDOWN: Line protocol on Interface Port-channel1, changed state to down
+R1(config)#
+R1(config)#
+R1(config)#end
+R1#
+R1#exit
