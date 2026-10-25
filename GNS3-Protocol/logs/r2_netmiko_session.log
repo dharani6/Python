@@ -1,0 +1,479 @@
+Connected to Dynamips VM "R2" (ID 2, type c7200) - Console port
+Press ENTER to get the prompt.
+ Protocol
+FastEthernet0/0        unassigned      YES unset  administratively down down    
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet2/0     unassigned      YES unset  administratively down down    
+Port-channel1          10.10.10.2      YES manual up                    up      
+R2#
+R2#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R2 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+
+R2#terminal width 511
+R2#terminal length 0
+R2#
+R2#
+R2#
+R2#
+R2#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES unset  administratively down down    
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet2/0     unassigned      YES unset  administratively down down    
+Port-channel1          10.10.10.2      YES manual up                    up      
+R2#
+R2#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R2 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+R2#terminal width 511
+R2#terminal length 0
+R2#
+R2#
+R2#
+R2#
+R2#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES unset  administratively down down    
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet2/0     unassigned      YES unset  administratively down down    
+Port-channel1          10.10.10.2      YES manual up                    up      
+R2#
+R2#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R2 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+R2#terminal width 511
+R2#terminal length 0
+R2#
+R2#
+R2#
+R2#
+R2#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES unset  administratively down down    
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet2/0     unassigned      YES unset  administratively down down    
+Port-channel1          10.10.10.2      YES manual up                    up      
+R2#
+R2#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R2 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+R2#terminal width 511
+R2#terminal length 0
+R2#
+R2#
+R2#
+R2#
+R2#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES unset  administratively down down    
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet2/0     unassigned      YES unset  administratively down down    
+Port-channel1          10.10.10.2      YES manual up                    up      
+R2#
+R2#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+R2 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+R2#
+R2#
+R2#show ip interface brief | include Port-channel1
+Port-channel1          10.10.10.2      YES manual up                    up      
+R2#
+R2#
+R2#sh inte   p inter
+R2#sh ip interface br
+R2#sh ip interface brief  
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES unset  administratively down down    
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet2/0     unassigned      YES unset  administratively down down    
+Port-channel1          10.10.10.2      YES manual up                    up      
+R2#
+R2#terminal width 511
+R2#terminal length 0
+R2#
+R2#
+R2#
+R2#
+R2#show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES unset  administratively down down    
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet2/0     unassigned      YES unset  administratively down down    
+Port-channel1          10.10.10.2      YES manual up                    up      
+R2#
+
+R2#exit

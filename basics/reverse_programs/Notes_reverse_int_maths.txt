@@ -1,0 +1,296 @@
+Notebook Entry
+
+Problem: - reverse integer
+
+
+Exampls input --> output
+
+12345  -> 54321
+987654 -> 456789
+1000   -> 1
+-12345 -> -54321
+
+Purpose
+
+
+Learn:
+
+- Modulus (%)
+- Integer Division (//)
+- While Loop
+- Mathematical Manipulation
+- Number Processing
+
+Real World Usage
+
+Not commonly used directly in automation.
+
+But concepts are used everywhere:
+
+- Parsing IDs
+- Extracting digits
+- Processing counters
+- OTP validation
+- Algorithm interviews
+
+Interview Answer
+
+Reverse Integer means reversing digits
+without converting the integer to a string.
+
+We repeatedly extract the last digit
+using modulus operator and build the
+reversed number.
+
+Memory Trick
+
+Think:
+
+12345
+
+Take out 5
+Take out 4
+Take out 3
+Take out 2
+Take out 1
+
+Build:
+
+5
+54
+543
+5432
+54321
+Like removing books from a stack one by one.
+
+Flow Diagram
+
+input: 12345
+
+Initial: 
+n = 12345
+result = 0
+
+
+iteration 1 
+
+digit = 12345 % 10
+
+digit = 5
+
+result = 0*10 + 5
+
+result = 5
+
+n = 12345 // 10
+
+n = 1234
+
+
+Iteration 2
+
+digit = 4
+
+result = 5*10 + 4
+
+result = 54
+
+n = 123
+
+Iteration 3
+
+digit = 3
+
+result = 543
+
+n = 12
+
+
+Iteration 3
+
+digit = 3
+
+result = 543
+
+n = 12
+
+Iteration 4
+
+digit = 2
+
+result = 5432
+
+n = 1
+
+Iteration 5
+
+digit = 1
+
+result = 54321
+
+n = 0
+
+Loop Ends
+
+Output:
+54321
+
+
+input 
+12345
+
+Algorithm
+
+1. Initialize result = 0
+
+2. While n > 0
+
+    Extract last digit
+
+    digit = n % 10
+
+    Append digit
+
+    result = result*10 + digit
+
+    Remove last digit
+
+    n = n // 10
+
+3. Return result
+
+
+Complexity
+
+Time Complexity
+
+O(d)
+
+where
+
+d = number of digits
+
+for : 12345
+
+digits : 5 
+
+Loop executes: 5 times 
+
+
+more Exampls 
+123
+→ 3 iterations
+
+12345
+→ 5 iterations
+
+123456789
+→ 9 iterations
+
+Therefore:
+
+Time = O(d)
+
+
+Why not O(n)?
+
+Because we are not processing an array.
+
+We are processing:
+digits
+
+For interview purposes:
+O(log10(n))
+
+is the most accurate answer.
+
+Why?
+
+Because:
+
+Number of digits in n
+
+=
+
+log10(n) + 1
+
+
+is the most accurate answer.
+
+Why?
+
+Because:
+
+Number of digits in n
+
+=
+
+log10(n) + 1
+
+Example:
+
+1000
+
+log10(1000)
+
+=
+
+3
+
+digits
+
+=
+
+4
+
+So interview answer:
+
+Time Complexity = O(log n)
+
+where base is 10.
+
+Space Complexity
+
+Variables used:
+
+result
+digit
+n
+
+Only fixed variables.
+
+No extra list.
+
+No stack.
+
+No recursion.
+
+Therefore:
+
+Space Complexity = O(1)
+
+Test Cases
+
+Normal:
+
+12345 → 54321
+
+Single Digit:
+
+7 → 7
+
+Zero:
+
+0 → 0
+
+Trailing Zeros:
+
+1000 → 1
+
+Negative:
+
+-12345 → -54321
+
+Your implementation already handles negative numbers nicely by recursively reversing the positive value and applying the sign back.
+
+
