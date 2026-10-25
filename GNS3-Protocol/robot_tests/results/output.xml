@@ -1,151 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5 (Python 3.13.14 on win32)" generated="2026-10-25T13:48:58.765899" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5 (Python 3.13.14 on win32)" generated="2026-10-25T14:10:29.034920" rpa="false" schemaversion="5">
 <suite id="s1" name="Lacp" source="C:\Python_Learning\GNS3-Protocol\robot_tests\lacp.robot">
 <kw name="Connect To Routers" owner="RouterConnections" type="SETUP">
-<msg time="2026-10-25T13:49:01.314318" level="INFO">Connected to R1 at localhost:5004</msg>
-<msg time="2026-10-25T13:49:13.550196" level="FAIL">ReadTimeout: 
-
-Pattern not detected: 'terminal width 511' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-</msg>
+<msg time="2026-10-25T14:10:31.338456" level="INFO">Connected to R1 at localhost:5004</msg>
+<msg time="2026-10-25T14:10:32.735929" level="INFO">Connected to R2 at localhost:5005</msg>
 <doc>Connect to R1 and R2 before the LACP tests start.</doc>
-<status status="FAIL" start="2026-10-25T13:48:59.460198" elapsed="14.094398">ReadTimeout: 
-
-Pattern not detected: 'terminal width 511' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-</status>
+<status status="PASS" start="2026-10-25T14:10:29.273184" elapsed="3.462977"/>
 </kw>
 <test id="s1-t1" name="R1 Port Channel Is Up" line="9">
-<status status="FAIL" start="2026-10-25T13:49:13.554752" elapsed="0.000315">Parent suite setup failed:
-ReadTimeout: 
-
-Pattern not detected: 'terminal width 511' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-</status>
+<kw name="Verify Port Channel Is Up" owner="LacpLibrary">
+<msg time="2026-10-25T14:10:33.019191" level="INFO">R1 interface output:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES NVRAM  administratively down down    
+GigabitEthernet1/0     unassigned      YES NVRAM  up                    up      
+GigabitEthernet2/0     unassigned      YES NVRAM  up                    up      
+Serial3/0              unassigned      YES unset  administratively down down    
+Serial3/1              unassigned      YES unset  administratively down down    
+Serial3/2              unassigned      YES unset  administratively down down    
+Serial3/3              unassigned      YES unset  administratively down down    
+Serial3/4              unassigned      YES unset  administratively down down    
+Serial3/5              unassigned      YES unset  administratively down down    
+Serial3/6              unassigned      YES unset  administratively down down    
+Serial3/7              unassigned      YES unset  administratively down down    
+Ethernet4/0            unassigned      YES unset  administratively down down    
+Ethernet4/1            unassigned      YES unset  administratively down down    
+Ethernet4/2            unassigned      YES unset  administratively down down    
+Ethernet4/3            unassigned      YES unset  administratively down down    
+Ethernet4/4            unassigned      YES unset  administratively down down    
+Ethernet4/5            unassigned      YES unset  administratively down down    
+Ethernet4/6            unassigned      YES unset  administratively down down    
+Ethernet4/7            unassigned      YES unset  administratively down down    
+Serial5/0              unassigned      YES unset  administratively down down    
+Serial5/1              unassigned      YES unset  administratively down down    
+Serial5/2              unassigned      YES unset  administratively down down    
+Serial5/3              unassigned      YES unset  administratively down down    
+Ethernet6/0            unassigned      YES unset  administratively down down    
+Ethernet6/1            unassigned      YES unset  administratively down down    
+Ethernet6/2            unassigned      YES unset  administratively down down    
+Ethernet6/3            unassigned      YES unset  administratively down down    
+Port-channel1          10.10.10.1      YES NVRAM  up                    up      </msg>
+<arg>R1</arg>
+<doc>Check that Port-channel1 has the expected IP and is up/up.</doc>
+<status status="PASS" start="2026-10-25T14:10:32.738055" elapsed="0.281278"/>
+</kw>
+<status status="PASS" start="2026-10-25T14:10:32.736506" elapsed="0.283173"/>
 </test>
 <test id="s1-t2" name="R2 Port Channel Is Up" line="12">
-<status status="FAIL" start="2026-10-25T13:49:13.555249" elapsed="0.000207">Parent suite setup failed:
-ReadTimeout: 
-
-Pattern not detected: 'terminal width 511' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-</status>
+<kw name="Verify Port Channel Is Up" owner="LacpLibrary">
+<msg time="2026-10-25T14:10:33.442235" level="INFO">R2 interface output:
+Interface              IP-Address      OK? Method Status                Protocol
+FastEthernet0/0        unassigned      YES NVRAM  administratively down down    
+GigabitEthernet1/0     unassigned      YES NVRAM  up                    up      
+GigabitEthernet2/0     unassigned      YES NVRAM  up                    up      
+Serial3/0              unassigned      YES unset  administratively down down    
+Serial3/1              unassigned      YES unset  administratively down down    
+Serial3/2              unassigned      YES unset  administratively down down    
+Serial3/3              unassigned      YES unset  administratively down down    
+Serial3/4              unassigned      YES unset  administratively down down    
+Serial3/5              unassigned      YES unset  administratively down down    
+Serial3/6              unassigned      YES unset  administratively down down    
+Serial3/7              unassigned      YES unset  administratively down down    
+Ethernet4/0            unassigned      YES unset  administratively down down    
+Ethernet4/1            unassigned      YES unset  administratively down down    
+Ethernet4/2            unassigned      YES unset  administratively down down    
+Ethernet4/3            unassigned      YES unset  administratively down down    
+Ethernet4/4            unassigned      YES unset  administratively down down    
+Ethernet4/5            unassigned      YES unset  administratively down down    
+Ethernet4/6            unassigned      YES unset  administratively down down    
+Ethernet4/7            unassigned      YES unset  administratively down down    
+Ethernet5/0            unassigned      YES unset  administratively down down    
+Ethernet5/1            unassigned      YES unset  administratively down down    
+Ethernet5/2            unassigned      YES unset  administratively down down    
+Ethernet5/3            unassigned      YES unset  administratively down down    
+Serial6/0              unassigned      YES unset  administratively down down    
+Serial6/1              unassigned      YES unset  administratively down down    
+Serial6/2              unassigned      YES unset  administratively down down    
+Serial6/3              unassigned      YES unset  administratively down down    
+Port-channel1          10.10.10.2      YES NVRAM  up                    up      </msg>
+<arg>R2</arg>
+<doc>Check that Port-channel1 has the expected IP and is up/up.</doc>
+<status status="PASS" start="2026-10-25T14:10:33.020856" elapsed="0.421573"/>
+</kw>
+<status status="PASS" start="2026-10-25T14:10:33.020335" elapsed="0.422686"/>
 </test>
 <test id="s1-t3" name="R1 Can Ping R2" line="15">
-<status status="FAIL" start="2026-10-25T13:49:13.555621" elapsed="0.000220">Parent suite setup failed:
-ReadTimeout: 
-
-Pattern not detected: 'terminal width 511' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-</status>
+<kw name="Verify Peer Ping" owner="LacpLibrary">
+<msg time="2026-10-25T14:10:34.139355" level="INFO">R1 ping to 10.10.10.2:
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.10.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 92/96/104 ms</msg>
+<arg>R1</arg>
+<doc>Ping the other router and require at least 80% success.</doc>
+<status status="PASS" start="2026-10-25T14:10:33.444328" elapsed="0.695146"/>
+</kw>
+<status status="PASS" start="2026-10-25T14:10:33.443919" elapsed="0.695924"/>
 </test>
 <test id="s1-t4" name="R2 Can Ping R1" line="18">
-<status status="FAIL" start="2026-10-25T13:49:13.556054" elapsed="0.000217">Parent suite setup failed:
-ReadTimeout: 
-
-Pattern not detected: 'terminal width 511' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-</status>
+<kw name="Verify Peer Ping" owner="LacpLibrary">
+<msg time="2026-10-25T14:10:34.898669" level="INFO">R2 ping to 10.10.10.1:
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.10.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 92/93/96 ms</msg>
+<arg>R2</arg>
+<doc>Ping the other router and require at least 80% success.</doc>
+<status status="PASS" start="2026-10-25T14:10:34.140654" elapsed="0.758219"/>
+</kw>
+<status status="PASS" start="2026-10-25T14:10:34.140249" elapsed="0.759165"/>
 </test>
 <test id="s1-t5" name="R1 Has R2 ARP Entry" line="21">
-<status status="FAIL" start="2026-10-25T13:49:13.556512" elapsed="0.000289">Parent suite setup failed:
-ReadTimeout: 
-
-Pattern not detected: 'terminal width 511' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-</status>
+<kw name="Verify Peer Arp Entry" owner="LacpLibrary">
+<msg time="2026-10-25T14:10:35.514458" level="INFO">R1 ARP table:
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.10.10.1              -   ca01.2b0c.001c  ARPA   Port-channel1
+Internet  10.10.10.2              7   ca02.2454.001c  ARPA   Port-channel1</msg>
+<arg>R1</arg>
+<doc>Check that the peer has a resolved ARP entry on Port-channel1.</doc>
+<status status="PASS" start="2026-10-25T14:10:34.901124" elapsed="0.613456"/>
+</kw>
+<status status="PASS" start="2026-10-25T14:10:34.900431" elapsed="0.614384"/>
 </test>
 <test id="s1-t6" name="R2 Has R1 ARP Entry" line="24">
-<status status="FAIL" start="2026-10-25T13:49:13.557066" elapsed="0.000354">Parent suite setup failed:
-ReadTimeout: 
-
-Pattern not detected: 'terminal width 511' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-</status>
+<kw name="Verify Peer Arp Entry" owner="LacpLibrary">
+<msg time="2026-10-25T14:10:36.029745" level="INFO">R2 ARP table:
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.10.10.1              9   ca01.2b0c.001c  ARPA   Port-channel1
+Internet  10.10.10.2              -   ca02.2454.001c  ARPA   Port-channel1</msg>
+<arg>R2</arg>
+<doc>Check that the peer has a resolved ARP entry on Port-channel1.</doc>
+<status status="PASS" start="2026-10-25T14:10:35.515549" elapsed="0.514282"/>
+</kw>
+<status status="PASS" start="2026-10-25T14:10:35.515242" elapsed="0.514976"/>
 </test>
 <kw name="Disconnect From Routers" owner="RouterConnections" type="TEARDOWN">
 <doc>Close all router connections after the tests finish.</doc>
-<status status="PASS" start="2026-10-25T13:49:13.558463" elapsed="0.000270"/>
+<status status="PASS" start="2026-10-25T14:10:36.031332" elapsed="0.170943"/>
 </kw>
 <doc>Verify LACP port-channel status, peer connectivity, and ARP entries.</doc>
-<status status="FAIL" start="2026-10-25T13:48:58.768169" elapsed="14.790713">Suite setup failed:
-ReadTimeout: 
-
-Pattern not detected: 'terminal width 511' in output.
-
-Things you might try to fix this:
-1. Adjust the regex pattern to better identify the terminating string. Note, in
-many situations the pattern is automatically based on the network device's prompt.
-2. Increase the read_timeout to a larger value.
-
-You can also look at the Netmiko session_log or debug log for more information.
-
-</status>
+<status status="PASS" start="2026-10-25T14:10:29.036358" elapsed="7.166099"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="6" skip="0">All Tests</stat>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Lacp" id="s1" pass="0" fail="6" skip="0">Lacp</stat>
+<stat name="Lacp" id="s1" pass="6" fail="0" skip="0">Lacp</stat>
 </suite>
 </statistics>
 <errors>
